@@ -10,7 +10,7 @@ def main(file_location: str):
         word_list = [
             word
             for line in f
-            for word in line.replace(" • ", '",  "').replace("\n", '",  "')
+            for word in line.replace(" • ", '", "').replace("\n", '", "')
         ]
 
     string = "".join(word_list)
