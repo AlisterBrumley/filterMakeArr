@@ -4,7 +4,7 @@ import typer
 
 def main(file_location: str):
     file_path = Path(file_location)
-    csv_path = Path(file_path.stem + "-arr" + file_path.suffix)
+    arr_path = file_path.with_suffix(".arr.txt")
 
     with file_path.open() as f:
         word_list = [
@@ -14,7 +14,7 @@ def main(file_location: str):
         ]
 
     string = "".join(word_list)
-    csv_path.write_text(string)
+    arr_path.write_text(string)
 
 
 if __name__ == "__main__":
